@@ -1,0 +1,223 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".scientific">
+
+
+    <EditText
+        android:id="@+id/displayAnswer"
+        android:textColor="#FFFFFF"
+        android:layout_width="fill_parent"
+        android:text="0"
+        android:textSize="70dp"
+        android:layout_height="120dp"/>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/displayAnswer"
+        android:text="Clear"
+        android:textSize="10dp"
+        android:typeface="sans"
+        android:textColor="#FFFFFF"
+        android:background="#FF0D00"
+        android:onClick="clear"/>
+
+    <Button
+        android:id="@+id/basic"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/displayAnswer"
+        android:layout_toRightOf="@id/clear"
+        android:text="Basic"
+        android:textSize="10dp"
+        android:typeface="sans"
+        android:textColor="#FFFFFF"
+        android:background="#0190AB"
+        android:onClick="basic"/>
+
+    <Button
+        android:id="@+id/sin"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/clear"
+        android:text="Sin"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#D3D3D3"
+        android:onClick="sin"/>
+
+    <Button
+        android:id="@+id/cos"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/clear"
+        android:layout_toRightOf="@id/sin"
+        android:text="cos"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#BDBDBD"
+        android:onClick="cos"/>
+
+    <Button
+        android:id="@+id/tan"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/clear"
+        android:layout_toRightOf="@id/cos"
+        android:text="Tan"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#D3D3D3"
+        android:onClick="tan"/>
+
+    <Button
+        android:id="@+id/ln"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/sin"
+        android:text="ln"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#BDBDBD"
+        android:onClick="ln"/>
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/cos"
+        android:layout_toRightOf="@id/ln"
+        android:text="Log"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#D3D3D3"
+        android:onClick="log"/>
+
+    <Button
+        android:id="@+id/pi"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/tan"
+        android:layout_toRightOf="@id/log"
+        android:text="π"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#BDBDBD"
+        android:onClick="pi"/>
+
+    <Button
+        android:id="@+id/i"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/clear"
+        android:layout_toRightOf="@id/pi"
+        android:text="i"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#BDBDBD"
+        android:onClick="i"/>
+
+    <Button
+        android:id="@+id/e"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/i"
+        android:layout_toRightOf="@id/pi"
+        android:text="e"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#D3D3D3"
+        android:onClick="e"/>
+
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/ln"
+        android:text="%"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#D3D3D3"
+        android:onClick="percent"/>
+
+    <Button
+        android:id="@+id/factorial"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/log"
+        android:layout_toRightOf="@id/percent"
+        android:text="!"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#BDBDBD"
+        android:onClick="factorial"/>
+
+    <Button
+        android:id="@+id/sqrroot"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/pi"
+        android:layout_toRightOf="@id/factorial"
+        android:text="√"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#D3D3D3"
+        android:onClick="sqrroot"/>
+
+    <Button
+        android:id="@+id/power"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/e"
+        android:layout_toRightOf="@id/sqrroot"
+        android:text="^"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:background="#BDBDBD"
+        android:onClick="sub"/>
+
+    <Button
+        android:id="@+id/leftP"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/percent"
+        android:text="("
+        android:textSize="50dp"
+        android:background="#BDBDBD"
+        android:onClick="leftP"/>
+
+    <Button
+        android:id="@+id/rightP"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/factorial"
+        android:layout_toRightOf="@id/leftP"
+        android:text=")"
+        android:textSize="50dp"
+        android:background="#D3D3D3"
+        android:onClick="rightP"/>
+
+    <Button
+        android:id="@+id/blank1"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/sqrroot"
+        android:layout_toRightOf="@id/rightP"
+        android:text=""
+        android:background="#BDBDBD"/>
+
+    <Button
+        android:id="@+id/blank2"
+        android:layout_width="72dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/power"
+        android:layout_toRightOf="@id/blank1"
+        android:text=""
+        android:background="#D3D3D3"/>
+
+</RelativeLayout>
