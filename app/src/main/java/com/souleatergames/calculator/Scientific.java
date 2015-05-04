@@ -14,6 +14,7 @@ public class Scientific extends Activity {
     public String string = "";
     Character mathFunction = 'm';
     double input, input2;
+    double pi = 3.14159;
     EditText answer;
     private Button basic;
 
@@ -35,101 +36,55 @@ public class Scientific extends Activity {
                 startActivity(intent);
             }
         });
-
     }
 
-//    public void zero(View v){ display(0); }
-//
-//    public void one(View v){ display(1); }
-//
-//    public void two(View v){ display(2); }
-//
-//    public void three(View v){ display(3); }
-//
-//    public void four(View v){ display(4); }
-//
-//    public void five(View v){ display(5); }
-//
-//    public void six(View v){ display(6); }
-//
-//    public void seven(View v){ display(7); }
-//
-//    public void eight(View v){ display(8); }
-//
-//    public void nine(View v){ display(9); }
-//
-//    public void period (View v) { answer.setText(input + "."); }
-//
-//    private void function() {
-//        string = "";
-//        input2 = input;
-//    }
-//
-//    public void add(View v){
-//        function();
-//        mathFunction = '+';
-//        answer.setText("+");
-//    }
-//
-//    public void sub(View v){
-//        function();
-//        mathFunction = '-';
-//        answer.setText("-");
-//    }
-//
-//    public void mult(View v){
-//        function();
-//        mathFunction = '×';
-//        answer.setText("×");
-//    }
-//
-//    public void div(View v){
-//        function();
-//        mathFunction = '÷';
-//        answer.setText("÷");
-//    }
-//
-//    public void equal(View v){ operations(); }
-//
-//    public void clear(View v){ reset(); }
-//
-//    private void reset() {
-//        string = "";
-//        mathFunction = 'm';
-//        input = 0;
-//        input2 = 0;
-//        answer.setText("0");
-//    }
-//
-//    private void display(int v) {
-//        string = string +Integer.toString(v);
-//        input = Integer.valueOf(string).intValue();
-//        answer.setText(string);
-//    }
-//
-//    private void operations() {
-//
-//        if(mathFunction == '+'){
-//            input = input2 + input;
-//        }
-//        else if(mathFunction == '-') {
-//            input = input2 - input;
-//        }
-//        else if(mathFunction == '÷') {
-//            input = input2 / input;
-//        }
-//        else if(mathFunction == '×') {
-//            input = input2 * input;
-//        }
-//
-////        if(mathFunction == '.'){
-////            input = 0 + '.';
-////        }
-//
-//
-//
-//        answer.setText("" + input);
-//    }
+    public void sin(View v){
+        answer.setText("sin");
+        double sine = Math.sin(input);
+        display(sine);
+    }
+
+    public void cos(View v){ answer.setText("cos"); }
+
+    public void tan(View v){ answer.setText("tan"); }
+
+    public void i(View v){ answer.setText("i"); }
+
+    public void ln(View v){ answer.setText("ln"); }
+
+    public void log(View v){ answer.setText("log"); }
+
+    public void pi(View v){ display(pi); }
+
+    public void e(View v){ display(2.71828); }
+
+    public void percent(View v){ answer.setText(input + "%"); }
+
+    public void factorial(View v){ answer.setText(input + "!"); }
+
+    public void sqrroot(View v) { answer.setText("√" + input); }
+
+    public void power(View v) { answer.setText(input + "^"); }
+
+    public void leftP(View v) { answer.setText("(" + input); }
+
+    public void rightP(View v) { answer.setText(input + ")"); }
+
+    public void clear(View v){ reset(); }
+
+    private void reset() {
+        string = "";
+        mathFunction = 'm';
+        input = 0;
+        input2 = 0;
+        answer.setText("0");
+    }
+
+    private void display(double v) {
+        string = string + Double.toString(v);
+        input = Double.valueOf(string).doubleValue();
+        answer.setText(string);
+    }
 
     public static void disableSoftInputFromAppearing(EditText editText) {
         if (Build.VERSION.SDK_INT >= 11) {
@@ -140,5 +95,4 @@ public class Scientific extends Activity {
             editText.setFocusable(true);
         }
     }
-
 }

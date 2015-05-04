@@ -37,6 +37,10 @@ public class MainActivity extends Activity {
             }
         });
 
+//        Intent intent = new Intent(MainActivity.this, Scientific.class);
+//        intent.putExtra("result", input);
+//        startActivity(intent);
+
     }
 
     public void zero(View v){ display(0); }
@@ -109,7 +113,6 @@ public class MainActivity extends Activity {
     }
 
     private void operations() {
-
         if(mathFunction == '+'){
             input = input2 + input;
         }
@@ -127,8 +130,6 @@ public class MainActivity extends Activity {
 //            input = 0 + '.';
 //        }
 
-
-
         answer.setText("" + input);
     }
 
@@ -141,5 +142,4 @@ public class MainActivity extends Activity {
             editText.setFocusable(true);
         }
     }
-
 }

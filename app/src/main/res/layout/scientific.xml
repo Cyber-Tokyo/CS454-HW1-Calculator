@@ -37,8 +37,7 @@
         android:textSize="10dp"
         android:typeface="sans"
         android:textColor="#FFFFFF"
-        android:background="#0190AB"
-        android:onClick="basic"/>
+        android:background="#0190AB"/>
 
     <Button
         android:id="@+id/sin"
@@ -179,7 +178,7 @@
         android:textSize="30dp"
         android:typeface="sans"
         android:background="#BDBDBD"
-        android:onClick="sub"/>
+        android:onClick="power"/>
 
     <Button
         android:id="@+id/leftP"
